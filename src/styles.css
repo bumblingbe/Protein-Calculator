@@ -1,0 +1,32 @@
+:root {
+  --colorA: #f7b008;
+  --colorB: #880044;
+  --colorC: #247ba0;
+  --colorD: #216a61;
+  --colorE: #ffff;
+}
+
+body {
+  background-color: var(--colorE);
+  border: 5px solid var(--colorC);
+  border-radius: 10px;
+  margin: 20px;
+  padding: 10px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  color: var(--colorA);
+}
+
+#food-type {
+  position: flexbox;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+#footer-icon {
+}
