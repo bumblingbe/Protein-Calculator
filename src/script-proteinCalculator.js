@@ -25,7 +25,7 @@ function getData(foodTypeInputValue) {
   //let contentType = "application/json";
   //NEED TO MAKE THIS MORE SPECIFIC DEPENDING ON API INVOLVED
   //axios.get(url).then(retrievePercentageProteinAndFoodName);
-  foodTypeInputValue = foodTypeInputValue.replace(" ", "+");
+  foodTypeInputValue = foodTypeInputValue.replaceAll(" ", "+");
   let url = `https://api.calorieninjas.com/v1/nutrition?query=100g+${foodTypeInputValue}`;
   console.log(url);
   axios
@@ -40,8 +40,7 @@ function getData(foodTypeInputValue) {
 
 function retrievePercentageProteinAndFoodName(response) {
   percentageProtein = response.data.items[0].protein_g;
-  foodName = response.data;
-  //NEED TO MAKE THIS MORE SPECIFIC DEPENDING ON API INVOLVED
+  foodName = response.data.items[0].name;
 
   updateFoodName(foodName);
   updateFoodNumbers(percentageProtein);
