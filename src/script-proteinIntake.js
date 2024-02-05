@@ -6,7 +6,6 @@ function calculateRatioKgToGBasedOnGender(event) {
   ////only accept male/female as 'gender'
   let genderInputElement = document.querySelector("#gender-input");
   let genderInputValue = genderInputElement.value;
-  alert(`gender is ${genderInputValue}`);
   if (genderInputValue == "female") {
     ratioKgToG = 0.75;
     //0.75 grams of protein for each kilogram of body weight for women 19-70 years of age
@@ -17,7 +16,6 @@ function calculateRatioKgToGBasedOnGender(event) {
     //////if not male/female, prompt to re-enter data
     alert("Please enter 'male' or 'female'. (See note below.)*");
   }
-  alert(`ratioKgToG is ${ratioKgToG}`);
   calculateRecommendedDailyProteinIntake(ratioKgToG);
 }
 
