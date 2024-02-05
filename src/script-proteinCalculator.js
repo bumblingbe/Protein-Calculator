@@ -8,13 +8,13 @@ var gramsProteinInputValue = 0;
 function handleSearch(event) {
   event.preventDefault();
 
+  //make/update variable which holds requested food type
   let foodTypeInputElement = document.querySelector("#food-type-input");
   let foodTypeInputValue = foodTypeInputElement.value;
-  alert(`food type: ${foodTypeInputValue}`);
 
+  //make/update variable which holds requested g of protein
   let gramsProteinInputElement = document.querySelector("#grams-protein-input");
   gramsProteinInputValue = gramsProteinInputElement.value;
-  alert(`grams of protein: ${gramsProteinInputValue}`);
 
   getData(foodTypeInputValue);
 }
@@ -28,7 +28,6 @@ function getData(foodTypeInputValue) {
   //axios.get(url).then(retrievePercentageProteinAndFoodName);
   foodTypeInputValue = foodTypeInputValue.replaceAll(" ", "+");
   let url = `https://api.calorieninjas.com/v1/nutrition?query=100g+${foodTypeInputValue}`;
-  console.log(url);
   axios
     .get(url, {
       headers: {
@@ -41,7 +40,6 @@ function getData(foodTypeInputValue) {
 
 function retrievePercentageProteinAndFoodName(response) {
   percentageProtein = response.data.items[0].protein_g;
-  console.log(percentageProtein);
   foodName = response.data.items[0].name;
 
   updateFoodName(foodName);
