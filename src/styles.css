@@ -56,14 +56,15 @@ button:hover {
   transition: 150ms;
 }
 
-a {
-  color: var(--color2a);
+.formButton a,
+.formButton a:visited {
   text-decoration: none;
+  color: var(--color8);
 }
 
-a:visited {
-  color: var(--color);
-  text-decoration: none;
+.codedBy a,
+.codedBy a:visited {
+  color: var(--color2a);
 }
 
 #button-container {
@@ -117,7 +118,8 @@ button,
   background-color: var(--color8);
 }
 
-#home-button {
+#home-button,
+#home-button a {
   /*border*/
   border-radius: 15px;
   border-color: var(--color5);
@@ -126,12 +128,15 @@ button,
   background-color: var(--color4b);
   /*font*/
   color: var(--color4c);
+  text-decoration: none;
 }
 
-#home-button:hover {
+#home-button:hover,
+#home-button a:hover {
   border-color: var(--color5);
   background-color: var(--color2);
   color: var(--color8);
+  text-decoration: none;
 }
 
 main {
