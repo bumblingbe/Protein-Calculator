@@ -54,9 +54,16 @@ function updateFoodName(foodName) {
 }
 
 function updateFoodNumbers(percentageProtein) {
+  //update food weight
   let foodWeightValue = (gramsProteinInputValue / percentageProtein) * 100;
   let foodWeightElement = document.querySelector("#food-weight");
   foodWeightElement.innerHTML = `${Math.round(foodWeightValue)}g`;
+
+  //update percentage protein
+  let percentageProteinElement = document.querySelector("#percent-protein");
+  percentageProteinElement.innerHTML = `${Math.round(
+    percentageProtein
+  )}%<br />protein`;
 }
 
 ////on search, catch input data
