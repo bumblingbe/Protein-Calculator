@@ -14,15 +14,37 @@
     <header></header>
     <main>
       <h1>Recommended protein intake</h1>
-      <form action="">
+      <form action="" id="recommended-protein-intake-form">
         <div>
-          <label for="">Gender:</label>
-          <input type="text" />
+          <label for="gender-input">Gender*:</label>
+          <input
+            type="text"
+            id="gender-input"
+            placeholder="e.g. female"
+            required
+          />
         </div>
         <div>
-          <label for="">What is your body weight?</label>
-          <input type="text" />
+          <label for="body-weight-input">Body weight (in kg):</label>
+          <input
+            type="text"
+            id="body-weight-input"
+            placeholder="e.g. 74"
+            required
+          />
         </div>
+        <p id="gender-disclaimer">
+          *Unfortunately at the moment I can only find data for cisgender folks.
+          If I come across data for transgender folks, I will use it!
+          <br /><br />Please also note that the
+          <a
+            href="https://dietitiansaustralia.org.au/health-advice/protein"
+            target="_blank"
+            >dietary advice</a
+          >
+          on which these calculations are made, only applies to people aged
+          18-70.
+        </p>
         <div>
           <input
             type="submit"
@@ -32,10 +54,10 @@
         </div>
       </form>
       <div class="spacer"></div>
-      <section class="response">
-        <div>Recommended daily protein intake:</div>
-        <div class="searchResult">10g</div>
-      </section>
+      <section
+        class="response"
+        id="recommended-daily-protein-intake-response"
+      ></section>
     </main>
     <div class="spacer"></div>
     <footer>
@@ -62,5 +84,5 @@
       </div>
     </footer>
   </body>
-  <script src="src/script.js"></script>
+  <script src="src/script-proteinIntake.js"></script>
 </html>

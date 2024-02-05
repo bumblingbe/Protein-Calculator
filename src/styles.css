@@ -164,6 +164,12 @@ footer {
   justify-content: center;
 }
 
+#gender-disclaimer {
+  font-size: 8px;
+  font-style: italic;
+  margin: 0 20%;
+}
+
 #percent-protein {
   font-size: 20px;
   opacity: 50%;
