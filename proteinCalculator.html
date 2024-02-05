@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Food/Protein Calculator</title>
     <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
@@ -39,9 +40,9 @@
       </form>
       <div class="spacer"></div>
       <section class="searchResult">
-        <div><small>Food type</small></div>
+        <div id="food-name"><small>Food type</small></div>
         <span id="food-type-result-container"
-          ><div>10g</div>
+          ><div id="food-weight">10g</div>
           <div id="percent-protein">7%<br />protein</div></span
         >
       </section>
