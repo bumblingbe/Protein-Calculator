@@ -2,6 +2,7 @@
 ////define global variables
 var percentageProtein = 0;
 var foodName = "";
+var gramsProteinInputValue = 0;
 
 ////define functions
 function handleSearch(event) {
@@ -12,7 +13,7 @@ function handleSearch(event) {
   alert(`food type: ${foodTypeInputValue}`);
 
   let gramsProteinInputElement = document.querySelector("#grams-protein-input");
-  let gramsProteinInputValue = gramsProteinInputElement.value;
+  gramsProteinInputValue = gramsProteinInputElement.value;
   alert(`grams of protein: ${gramsProteinInputValue}`);
 
   getData(foodTypeInputValue);
@@ -40,6 +41,7 @@ function getData(foodTypeInputValue) {
 
 function retrievePercentageProteinAndFoodName(response) {
   percentageProtein = response.data.items[0].protein_g;
+  console.log(percentageProtein);
   foodName = response.data.items[0].name;
 
   updateFoodName(foodName);
@@ -52,7 +54,7 @@ function updateFoodName(foodName) {
 }
 
 function updateFoodNumbers(percentageProtein) {
-  let foodWeightValue = percentageProtein * gramsProteinInputValue;
+  let foodWeightValue = (gramsProteinInputValue / percentageProtein) * 100;
   let foodWeightElement = document.querySelector("#food-weight");
   foodWeightElement.innerHTML = `${Math.round(foodWeightValue)}g`;
 }
