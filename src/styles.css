@@ -49,6 +49,23 @@ div {
   margin: 10px;
 }
 
+a:hover,
+button:hover {
+  /*hover*/
+  cursor: pointer;
+  transition: 150ms;
+}
+
+a {
+  color: var(--color2a);
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--color);
+  text-decoration: none;
+}
+
 #button-container {
   display: flex;
   align-items: stretch;
@@ -86,12 +103,6 @@ button,
   padding: 10px 3vw;
 }
 
-:hover {
-  /*hover*/
-  cursor: pointer;
-  transition: 150ms;
-}
-
 .openingQuestions,
 .formButton {
   /*border*/
@@ -121,16 +132,6 @@ button,
   border-color: var(--color5);
   background-color: var(--color2);
   color: var(--color8);
-}
-
-a {
-  color: var(--color2a);
-  text-decoration: none;
-}
-
-a:visited {
-  color: var(--color);
-  text-decoration: none;
 }
 
 main {
