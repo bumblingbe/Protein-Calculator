@@ -19,15 +19,27 @@ function handleSearch(event) {
 }
 
 function getData(foodTypeInputValue) {
-  let url = `#`;
+  //let apiKey = "pn91AQvkUVjb+8DpE09vMg==LVj3tCiHQYUq89OJ";
+  //let url = `https://api.calorieninjas.com/v1/nutrition?query=100g ${foodTypeInputValue}`;
+  //let headers = `{'X-Api-Key': '${apiKey}'}`;
+  //let contentType = "application/json";
   //NEED TO MAKE THIS MORE SPECIFIC DEPENDING ON API INVOLVED
-  axios.get(url).then(retrievePercentageProteinAndFoodName);
+  //axios.get(url).then(retrievePercentageProteinAndFoodName);
+  foodTypeInputValue = foodTypeInputValue.replace(" ", "+");
+  let url = `https://api.calorieninjas.com/v1/nutrition?query=100g+${foodTypeInputValue}`;
+  console.log(url);
+  axios
+    .get(url, {
+      headers: {
+        "X-Api-Key": "pn91AQvkUVjb+8DpE09vMg==LVj3tCiHQYUq89OJ",
+        "Content-Type": "application/json",
+      },
+    })
+    .then(retrievePercentageProteinAndFoodName);
 }
 
 function retrievePercentageProteinAndFoodName(response) {
-  percentageProtein = response.data;
-  //NEED TO MAKE THIS MORE SPECIFIC DEPENDING ON API INVOLVED
-
+  percentageProtein = response.data.items[0].protein_g;
   foodName = response.data;
   //NEED TO MAKE THIS MORE SPECIFIC DEPENDING ON API INVOLVED
 
