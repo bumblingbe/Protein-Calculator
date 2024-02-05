@@ -14,7 +14,7 @@
     <header></header>
     <main>
       <h1>Food/Protein Calculator</h1>
-      <form action="" id="food-type">
+      <form action="" id="food-type-form">
         <div>
           <label for="food-input">Enter food:</label>
           <input
@@ -32,10 +32,12 @@
         </div>
       </form>
       <div class="spacer"></div>
-      <section>
-        <div>Food type</div>
-        <div>10g</div>
-        <div>7% protein</div>
+      <section class="searchResult">
+        <div><small>Food type</small></div>
+        <span id="food-type-result-container"
+          ><div>10g</div>
+          <div id="percent-protein">7%<br />protein</div></span
+        >
       </section>
     </main>
     <div class="spacer"></div>
