@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Food quantity</title>
+    <title>Food/Protein Calculator</title>
     <link rel="stylesheet" href="src/styles.css" />
     <link
       rel="stylesheet"
@@ -13,7 +13,7 @@
   <body>
     <header></header>
     <main>
-      <h1>Protein Calculator</h1>
+      <h1>Food/Protein Calculator</h1>
       <form action="" id="food-type">
         <div>
           <label for="food-input">Enter food:</label>
@@ -28,27 +28,39 @@
           <input type="text" placeholder="e.g. 12" id="grams-protein" />
         </div>
         <div>
-          <input type="submit" required />
+          <input type="submit" required class="formButton smallButton" />
         </div>
       </form>
+      <div class="spacer"></div>
       <section>
         <div>Food type</div>
         <div>10g</div>
         <div>7% protein</div>
       </section>
-
-      <button>
+    </main>
+    <footer>
+      <div class="spacer"></div>
+      <button id="home-button">
         <a
-          href="file:///C:/Users/green/OneDrive/Desktop/Learning/MOOCs/SheCodes/Plus/Own%20Projects/Protein-g-calculator/index.html?"
+          href="file:///C:/Users/green/OneDrive/Desktop/Learning/MOOCs/SheCodes/Plus/Own%20Projects/Protein-g-calculator/home.html"
           >Home</a
         >
       </button>
-    </main>
-    <footer>
-      Coded by Bethia
-      <span class="material-symbols-outlined" id="footer-icon"
-        >nature_people</span
-      >
+      <div>
+        Coded by
+        <a href="https://github.com/bumblingbe" target="_blank">B Blond</a> on
+        <a
+          href="https://github.com/bumblingbe/Protein-Calculator"
+          target="_blank"
+          >Github</a
+        >, hosted by
+        <a href="https://protein-g-calculator.netlify.app/" target="_blank"
+          >Netlify</a
+        ><span class="footerDivider">•</span
+        ><span class="material-symbols-outlined" id="footer-icon"
+          >nature_people</span
+        >
+      </div>
     </footer>
   </body>
   <script src="src/script.js"></script>

@@ -17,6 +17,8 @@
   --color2: #4e1100;
   --color3: #c92a1c;
   --color4: #bfe5ee;
+  --color4b: #64878b;
+  --color4c: #2d4049;
   --color5: #1c2628;
   --color5b: #221f0d;
   --color6: #a88017;
@@ -33,12 +35,18 @@ body {
   text-align: center;
   text-decoration: none;
   font-family: "Roboto", sans-serif;
+  color: var(--color5);
   box-shadow: -5px 5px 10px 0 var(--color6), -10px 10px 10px 0 var(--color0a);
 }
 
 h1 {
   color: var(--color1);
   font-style: italic;
+  padding-bottom: 20px;
+}
+
+section {
+  margin-top: ;
 }
 
 div {
@@ -52,14 +60,69 @@ div {
   flex-wrap: wrap;
 }
 
-button {
+button,
+.formButton {
+  /*spacing*/
   margin: 10px 15px;
+  /*border*/
+  border-radius: 20px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--color5);
+  /*background*/
+  background-color: var(--color2);
+  /*font*/
+  color: var(--color8);
+  font-weight: 600;
+}
+
+.mediumButton {
+  /*spacing*/
   width: 40%;
   max-width: 200px;
   min-height: 85px;
   padding: 10px 3vw;
-  border-radius: 20px;
-  border: none;
+}
+
+.smallButton {
+  /*spacing*/
+  margin: 10px 15px;
+  padding: 10px 3vw;
+}
+
+:hover {
+  /*hover*/
+  cursor: pointer;
+  transition: 150ms;
+}
+
+.openingQuestions,
+.formButton {
+  /*border*/
+  border-color: var(--color2);
+}
+
+.openingQuestions:hover,
+.formButton:hover {
+  /*font*/
+  color: var(--color3);
+  /*font*/
+  background-color: var(--color8);
+}
+
+#home-button {
+  /*border*/
+  border-radius: 15px;
+  border-color: var(--color5);
+  border-width: 1px;
+  /*background*/
+  background-color: var(--color4b);
+  /*font*/
+  color: var(--color4c);
+}
+
+#home-button:hover {
+  border-color: var(--color5);
   background-color: var(--color2);
   color: var(--color8);
 }
@@ -79,11 +142,16 @@ footer {
   padding: 20px;
 }
 
-footer {
+.spacer {
   border-top: 1px solid var(--color4);
-  margin: 0 20%;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+footer {
   font-size: 10px;
   font-style: italic;
+  color: var(--color3);
 }
 
 #food-type {
@@ -94,7 +162,11 @@ footer {
   font-variation-settings: "FILL" 0, "wght" 100, "GRAD" 0, "opsz" 24;
   position: relative;
   top: 4.5px;
-  margin-left: 3px;
+}
+
+.footerDivider {
+  padding: 0 10px;
+  font-style: normal;
 }
 
 #footer-icon {
