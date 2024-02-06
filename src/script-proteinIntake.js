@@ -6,6 +6,7 @@ function calculateRatioKgToGBasedOnGender(event) {
   ////only accept male/female as 'gender'
   let genderInputElement = document.querySelector("#gender-input");
   let genderInputValue = genderInputElement.value;
+  genderInputValue = genderInputValue.trim().toLowerCase();
   if (genderInputValue == "female") {
     ratioKgToG = 0.75;
     //0.75 grams of protein for each kilogram of body weight for women 19-70 years of age

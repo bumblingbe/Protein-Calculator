@@ -15,6 +15,7 @@ function handleSearch(event) {
   //make/update variable which holds requested g of protein
   let gramsProteinInputElement = document.querySelector("#grams-protein-input");
   gramsProteinInputValue = gramsProteinInputElement.value;
+  gramsProteinInputValue = gramsProteinInputValue.trim().toLowerCase();
 
   getData(foodTypeInputValue);
 }
