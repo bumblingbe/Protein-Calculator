@@ -90,7 +90,8 @@ button,
   font-weight: 600;
 }
 
-.mediumButton {
+.mediumButton,
+a.mediumButton {
   /*spacing*/
   width: 40%;
   max-width: 200px;
